@@ -1,0 +1,48 @@
+// AutomovilView
+
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title REGISTRAR AUTO
+    link(rel="stylesheet", href="CSS/AutomovilStyle.css")
+  body
+    .container_outside
+      .container_inside
+
+        .container_title
+          .title REGISTRO DE AUTO
+        .container_sub_title
+          .sub_title Que auto vas a ingresar?
+
+        form(action="/AutomovilView", method="POST")
+
+          .input_container
+            .container_input
+              input.input(placeholder="Placa del auto", type="text", id="numeroplaca", name="numeroplaca", required)
+            .container_input
+              input.input(placeholder="Marca del auto", type="text", id="marca", name="marca", required)
+            .switch_container_input
+              .switch Disponibilidad del auto
+              .container_input
+                select.switch_input(id="disponibilidad", name="disponibilidad", required)
+                  option(value="disponible") disponible
+                  option(value="no disponible") no disponible
+
+          .container_mensaje
+            .mensaje
+              if error == null
+                p 
+              else if error == false 
+                p(style={color:'red'}) #{message}
+              else
+                p(style={color:'green'}) #{message}
+
+          .container_button
+            .buttonRegistro
+              button.buttonText(type="submit") REGISTRAR AUTO
+          .container_button
+            .button
+              a.buttonText(href="/MenuView") VOLVER
+            .button
+              a.buttonText(href="/ListaAutomovilView") VER LISTA AUTO

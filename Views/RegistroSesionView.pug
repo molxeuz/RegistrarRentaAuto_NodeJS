@@ -1,0 +1,42 @@
+// RegistroSesionView
+
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title REGISTRO DE USUARIO
+    link(rel="stylesheet", href="CSS/RegistroSesionStyle.css")
+  body
+    .container_outside
+      .container_inside
+
+        .container_title
+          .title REGISTRO DE USUARIO
+        .container_sub_title
+          .sub_title Registrate para conocernos
+
+        form(action="/RegistroSesionView", method="POST")
+
+          .input_container
+
+            .container_input
+              input.input( placeholder="Usuario", type="text", id="usuario", name="usuario", required)
+            .container_input
+              input.input( placeholder="Nombre", type="text", id="nombre", name="nombre", required)
+            .container_input
+              input.input( placeholder="Contraseña", type="password", id="contraseña", name="contraseña", required)
+
+            .container_mensaje      
+              .mensaje
+                if error == null
+                  p 
+                else if error == false 
+                  p(style={color:'red'}) #{message}
+                else
+                  p(style={color:'green'}) #{message}
+
+          .container_button
+            .button
+              button.buttonText(type="submit") REGISTRARSE
+            .button
+              a.buttonText(href="/InicioSesionView") INICIAR SESIÓN

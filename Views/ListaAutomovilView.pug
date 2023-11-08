@@ -1,0 +1,39 @@
+// ListaAutomovilView
+
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title LISTA DE AUTOS
+    link(rel="stylesheet", href="/CSS/ListaAutomovilStyle.css")
+  body
+    .container_outside
+      .container_inside
+      
+        .container_title
+          .title LISTA DE AUTOS
+        .container_sub_title
+          .sub_title Autos registrados
+
+        .container_Scroll
+          .scrollContainer
+            if automoviles && automoviles.length > 0
+
+              each automovil in automoviles
+                .carItem
+                  p.carInfo Placa del auto: #{automovil.numeroplaca}
+                  p.carInfo Marca del auto: #{automovil.marca}
+                  if (automovil.disponibilidad === "disponible")
+                    p.carInfo(style="color: green") Estado: #{automovil.disponibilidad}
+                  else if (automovil.disponibilidad === "no disponible")
+                    p.carInfo(style="color: red") Estado: #{automovil.disponibilidad}
+                  else
+                    p.carInfo Estado: #{automovil.estado}
+            else
+              p.noCarsText No hay automóviles registrados
+
+        .container_button
+          .button
+            a.buttonText(href="/MenuView") INICIO
+          .button
+            a.buttonText(href="/AutomovilView") REGISTRAR AUTO

@@ -1,0 +1,46 @@
+// RentaView
+
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title REGISTRO DE RENTA
+    link(rel="stylesheet", href="CSS/RentaStyle.css")
+  body
+    .container_outside
+      .container_inside
+
+        .container_title
+          .title REGISTRO DE RENTA
+        .container_sub_title
+          .sub_title Que auto vas a rentar?
+
+        form(action="/RentaView", method="POST")
+
+          .input_container
+            .container_input
+              input.input(placeholder="Numero de renta", type="number", id="numerorenta", name="numerorenta", required)
+            .container_input
+              input.input(placeholder="Placa del auto", type="text", id="numeroplaca", name="numeroplaca", required)
+            .container_input
+              input.input(placeholder="Usuario", type="text", id="usuario", name="usuario", required)
+            .container_input
+              input.input(placeholder="Fecha renta", type="date", id="fecharenta", name="fecharenta", required)
+
+          .container_mensaje
+            .mensaje
+              if error == null
+                p
+              else if error == false
+                p(style={color:'red'}) #{message}
+              else
+                p(style={color:'green'}) #{message}
+                
+          .container_button
+            .buttonRegistro
+              button.buttonText(type="submit") REGISTRAR RENTA
+          .container_button
+            .button
+              a.buttonText(href="/MenuView") VOLVER
+            .button
+              a.buttonText(href="/ListaRentaView") VER LISTA RENTA

@@ -1,0 +1,34 @@
+// ListaRentaView
+
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title LISTA DE RENTAS
+    link(rel="stylesheet", href="CSS/ListaRentaStyle.css")
+  body
+    .container_outside
+      .container_inside
+
+        .container_title
+          .title LISTA DE RENTAS
+        .container_sub_title
+          .sub_title Rentas registrados
+
+        .container_Scroll
+          .scrollContainer
+            if rentas && rentas.length > 0
+              each renta in rentas
+                .rentItem
+                  p.rentInfo Número de renta: #{renta.numerorenta}
+                  p.rentInfo Placa de auto: #{renta.numeroplaca}
+                  p.rentInfo Usuario: #{renta.usuario}
+                  p.rentInfo(style={color: 'orange'}) Fecha: #{moment(renta.fecharenta).format('DD/MM/YYYY')}
+            else
+              p.noRentsText No hay rentas registrados
+
+        .container_button
+          .button
+            a.buttonText(href="/MenuView") INICIO
+          .button
+            a.buttonText(href="/RentaView") REGISTRAR RENTA

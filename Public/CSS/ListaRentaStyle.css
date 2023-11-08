@@ -1,0 +1,145 @@
+body{
+  background-color: #78b2e7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container_outside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.container_inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  border: 5px solid black;
+  border-radius: 20px;
+  width: 380px;
+  background-color: #f5f5f5;
+}
+
+.container_title {
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.title {
+  margin-bottom: -10px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container_sub_title {
+  align-items: center;
+  justify-content: center;
+}
+
+.sub_title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.container_Scroll {
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: white;
+  overflow: auto;
+}
+
+.scrollContainer {
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.RentItem {
+  background-color: #f5f5f5;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px gray;
+  position: relative;
+  z-index: 0;
+}
+
+.RentInfo {
+  font-size: 17px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.noRentsText {
+  font-size: 16px;
+  text-align: center;
+}
+
+.container_mensaje {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.mensaje {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container_button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.button {
+  background-color: #78b2e7;
+  border: 3px solid black;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 140px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+}
+
+.buttonText {
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #78b2e7;
+  font-size: 14px;
+  font-weight: bold;
+}
